@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name..." id="cityInput">
+            <select id="unitSelect">
+                <option value="metric">Celsius</option>
+                <option value="imperial">Fahrenheit</option>
+            </select>
+            <button id="searchBtn">Search</button>
+            <button id="refreshBtn" title="Refresh Weather">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M21 12a9 9 0 1 1-6.22-8.66L17 5.5M17 5.5H13M17 5.5V2"/>
+                </svg>
+            </button>
+            <button id="locationBtn" title="Use My Location">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white">
+                    <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/>
+                    <circle cx="12" cy="12" r="4"/>
+                </svg>
+            </button>
+        </div>
+        <p id="error-message" class="error"></p>
+        <div id="loading" style="display: none;">Loading...</div>
+        <div class="weather-info">
+            <div id="weather-icon"></div>
+            <h2 id="temperature">--°C</h2>
+            <h3 id="city-name">City Name</h3>
+            <p id="weather-description">Condition: --</p>
+            <p id="condition-summary">--</p>
+            <div class="details">
+                <div class="col">
+                    <p id="humidity">Humidity: --%</p>
+                </div>
+                <div class="col">
+                    <p id="wind">Wind: -- km/h</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
